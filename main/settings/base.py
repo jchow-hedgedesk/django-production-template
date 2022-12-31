@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # CORE SETTINGS
 # ==============================================================================
 
-SECRET_KEY = config("SECRET_KEY", default="django-insecure$simple.settings.local")
+SECRET_KEY = config("SECRET_KEY", default="django-insecure$main.settings.local")
 
 DEBUG = config("DEBUG", default=True, cast=bool)
 
@@ -23,17 +23,17 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "simple.apps.accounts",
-    "simple.apps.core",
+    "main.apps.accounts",
+    "main.apps.core",
 ]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-ROOT_URLCONF = "simple.urls"
+ROOT_URLCONF = "main.urls"
 
 INTERNAL_IPS = ["127.0.0.1"]
 
-WSGI_APPLICATION = "simple.wsgi.application"
+WSGI_APPLICATION = "main.wsgi.application"
 
 
 # ==============================================================================
